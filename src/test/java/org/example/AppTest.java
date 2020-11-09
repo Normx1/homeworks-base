@@ -12,6 +12,7 @@ public class AppTest {
      * Rigorous Test :-)
      */
     @Test
+<<<<<<< HEAD
     public void zeroLessThenOne() {
         int greatter= App.max(1,0);
         assertEquals(1,greatter);
@@ -23,4 +24,9 @@ public class AppTest {
         assertEquals(1,greatter);
     }
 
+=======
+    public void shouldAnswerWithTrue() {
+        assertTrue(1 > 0);
+    }
+>>>>>>> d6f3b02 (hi!)
 }
