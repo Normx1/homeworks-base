@@ -22,9 +22,5 @@ public class AppTest {
         int greatter= App.max(0,1);
         assertEquals(1,greatter);
     }
-    @Test
-    public void fail() {
-        int greatter= App.max(1,3);
-        assertEquals(0,greatter);
-    }
+
 }
