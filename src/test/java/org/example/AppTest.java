@@ -12,15 +12,7 @@ public class AppTest {
      * Rigorous Test :-)
      */
     @Test
-    public void zeroLessThenOne() {
-        int greatter= App.max(1,0);
-        assertEquals(1,greatter);
+    public void shouldAnswerWithTrue() {
+        assertTrue(1 > 0);
     }
-
-    @Test
-    public void zeroLessThenOnereverced() {
-        int greatter= App.max(0,1);
-        assertEquals(1,greatter);
-    }
-
 }
