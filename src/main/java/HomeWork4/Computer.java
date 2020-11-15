@@ -5,12 +5,10 @@ import java.util.Scanner;
 
 public class Computer {
     public static void main(String[] args) {
-        new Ncomp();
+   //     Ncomp();
     }
-}
-    class Ncomp {
         // Метод описания
-        static void dyspalayInfo() {
+    static void dyspalayInfo() {
             System.out.println("Введите процессор: ");
             Scanner sc1= new Scanner(System.in);
             String processor = sc1.nextLine();
@@ -27,7 +25,7 @@ public class Computer {
             System.out.printf("Processor: %c \n + ram: %d\n+ +Hard Drive %e\n+ resource: %f\n ", processor , ram, hardDrive, resource);
         }
 
-        static void Vkl(int b) {
+    static void Vkl(int b) {
             int rand = 0;
             int vvod = 0;
             String vkl;
@@ -51,7 +49,7 @@ public class Computer {
 
         }
 
-        static void Close() {
+    static void Close() {
             int rand = 0;
             int vvod = 0;
             String off;
@@ -74,9 +72,13 @@ public class Computer {
             }
         }
 
-        static void resurses() {
-
-
+    static void resurses(int res) {
+        System.out.println("Сколько раз вы собираетесь вкл /выкл комп?");
+        Scanner sc = new Scanner(System.in);
+        int kol= sc.nextInt();
+        if (kol< res){
+            System.out.println("Компьютер сгорает...");
         }
     }
+}
 
