@@ -5,13 +5,25 @@ import java.util.Scanner;
 
 public class Computer {
     public static void main(String[] args) {
+        Scanner pr = new Scanner(System.in);
+        String proc = pr.nextLine();
+        Scanner r = new Scanner(System.in);
+        String ram = pr.nextLine();
+        Scanner h = new Scanner(System.in);
+        String hard = pr.nextLine();
+        Scanner res = new Scanner(System.in);
+        int resource = pr.nextInt();
+
+        dyspalayInfo(proc,ram,hard,resource);
+
+
         Vkl();
         Close();
-
+        resurses(resource);
     }
         // Метод описания
     static void dyspalayInfo(String processor , String ram, String hardDrive, int resource) {
-            System.out.printf("Processor: %c \n + ram: %d\n+ +Hard Drive %e\n+ resource: %f\n ", processor , ram, hardDrive, resource);
+            System.out.printf("Processor: %s \n + ram: %s\n+ +Hard Drive %s\n+ resource: %d\n ", processor , ram, hardDrive, resource);
 
         }
 
@@ -36,7 +48,6 @@ public class Computer {
             } else {
                 System.out.println("Компьютер выключен");
             }
-
         }
 
     static void Close() {
