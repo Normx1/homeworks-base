@@ -1,6 +1,7 @@
 package HomeWork4;
 
 import java.util.Random;
+import java.util.Scanner;
 
 class Computer {
 
@@ -22,7 +23,23 @@ class Computer {
     }
 
     public static void main(String[] args) {
-        Computer Comp = new Computer("Ryzen 3", "Kingston", "HITACHI 1000GB", 2);
+//        System.out.println("Введите характеристики Comp:");
+//        System.out.println("CPU: ");
+//        Scanner sc1 =new Scanner(System.in);
+//        String CPU =sc1.nextLine();
+//        System.out.println("RAM: ");
+//        Scanner sc2 =new Scanner(System.in);
+//        String RAM =sc2.nextLine();
+//        System.out.println("HDD: ");
+//        Scanner sc3 =new Scanner(System.in);
+//        String HDD =sc3.nextLine();
+//        System.out.println("Source: ");
+//        Scanner sc4 =new Scanner(System.in);
+//        int source = sc4.nextInt();
+//
+//        Computer Comp = new Computer(CPU,RAM, HDD, source);
+         Computer Comp = new Computer("Ryzen 3", "Kingston", "HITACHI 1000GB", 2);
+
         Comp.dyspalayInfo();
         Comp.turnOn(true);
         Comp.turnOff(true);
