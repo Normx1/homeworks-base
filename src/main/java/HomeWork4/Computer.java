@@ -23,55 +23,61 @@ class Computer {
     }
 
     public static void main(String[] args) {
-//        System.out.println("Введите характеристики Comp:");
-//        System.out.println("CPU: ");
-//        Scanner sc1 =new Scanner(System.in);
-//        String CPU =sc1.nextLine();
-//        System.out.println("RAM: ");
-//        Scanner sc2 =new Scanner(System.in);
-//        String RAM =sc2.nextLine();
-//        System.out.println("HDD: ");
-//        Scanner sc3 =new Scanner(System.in);
-//        String HDD =sc3.nextLine();
-//        System.out.println("Source: ");
-//        Scanner sc4 =new Scanner(System.in);
-//        int source = sc4.nextInt();
-//
-//        Computer Comp = new Computer(CPU,RAM, HDD, source);
-         Computer Comp = new Computer("Ryzen 3", "Kingston", "HITACHI 1000GB", 2);
+        System.out.println("Введите характеристики Comp:");
+        System.out.println("CPU: ");
+        Scanner sc1 =new Scanner(System.in);
+        String CPU =sc1.nextLine();
+        System.out.println("RAM: ");
+        Scanner sc2 =new Scanner(System.in);
+        String RAM =sc2.nextLine();
+        System.out.println("HDD: ");
+        Scanner sc3 =new Scanner(System.in);
+        String HDD =sc3.nextLine();
+        System.out.println("Source: ");
+        Scanner sc4 =new Scanner(System.in);
+        int source = sc4.nextInt();
 
+       Computer Comp = new Computer(CPU,RAM, HDD, source);
+//        Computer Comp = new Computer("Ryzen 3", "Kingston", "HITACHI 1000GB", 3);
         Comp.dyspalayInfo();
-        Comp.turnOn(true);
-        Comp.turnOff(true);
-        Comp.source(numSource);
+        while (numSource!=0) {
+            Comp.turnOn();
+            Comp.turnOff();
+            Comp.source(numSource);
+        }
 
     }
 
-    public void turnOn(boolean turn) {
-//        if (turn == false){
-//            System.out.println("Компьютер выключен");
-//    }
-        Random r = new Random();
-        boolean vkl = r.nextBoolean();
-        if (turn == vkl) {
-            System.out.println("Компьютер выключен");
-            numSource--;
-        } else {
-            Computer.source(numSource = 0);
+    public void turnOn() {
+
+        System.out.println("Вы хотите включить компьютер?");
+        Scanner scOn = new Scanner(System.in);
+        Boolean turnOn = scOn.nextBoolean();
+        if (numSource > 0) {
+            Random r = new Random();
+            boolean vkl = r.nextBoolean();
+            if (turnOn == false) {
+                System.out.println("Компьютер включен");
+                numSource--;
+            } else {
+                numSource = 0;
+            }
         }
     }
 
-    public void turnOff(boolean turnOff) {
-//        if (turn == false){
-//            System.out.println("Компьютер выключен");
-//    }
-        Random r = new Random();
-        boolean vkl = r.nextBoolean();
-        if (turnOff == vkl) {
-            System.out.println("Компьютер включен");
-            numSource--;
-        } else {
-            Computer.source(numSource = 0);
+    public void turnOff() {
+        if (numSource != 0) {
+        System.out.println("Вы хотите выключить компьютер?");
+        Scanner scOff = new Scanner(System.in);
+        Boolean turnOff = scOff.nextBoolean();
+            Random r = new Random();
+            boolean vkl = r.nextBoolean();
+            if (turnOff == vkl) {
+                System.out.println("Компьютер выключен");
+                numSource--;
+            } else {
+                numSource = 0;
+            }
         }
     }
 
