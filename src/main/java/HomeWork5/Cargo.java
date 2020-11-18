@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class Cargo extends LandTransport {
     public int carrying;
 
-    public Cargo(int numOfWeels, int fuelCons, int carrying) {
-        super(numOfWeels, fuelCons);
+    public Cargo(int power, int maxSpeed, int weight, String model, int numOfWeels, int fuelCons, int carrying) {
+        super(power, maxSpeed, weight, model, numOfWeels, fuelCons);
         this.carrying = carrying;
     }
 

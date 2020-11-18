@@ -6,8 +6,8 @@ public class Passenger extends LandTransport {
     public String typeBody;
     public int numOfPass;
 
-    public Passenger(int numOfWeels, int fuelCons, String typeBody, int numOfPass) {
-        super(numOfWeels, fuelCons);
+    public Passenger(int power, int maxSpeed, int weight, String model, int numOfWeels, int fuelCons, String typeBody, int numOfPass) {
+        super(power, maxSpeed, weight, model, numOfWeels, fuelCons);
         this.typeBody = typeBody;
         this.numOfPass = numOfPass;
     }
