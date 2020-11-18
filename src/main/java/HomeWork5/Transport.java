@@ -8,22 +8,11 @@ public class Transport {
     public String model;
 
 
-    protected Transport(int power, int maxSpeed,int  weight, String model){
-    this.power= power;
-    this.maxSpeed =maxSpeed;
-    this.weight = weight;
-    this.model = model;
+    protected Transport(int power, int maxSpeed, int weight, String model) {
+        this.power = power;
+        this.maxSpeed = maxSpeed;
+        this.weight = weight;
+        this.model = model;
 
     }
-
-    public Transport() {
-
-    }
-
-    public void viewModel(int a){
-        System.out.println("model "+ a);
-    }
-
-    public static void main(String[] args) {
-     }
 }

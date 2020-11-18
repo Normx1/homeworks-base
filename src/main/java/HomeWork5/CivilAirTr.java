@@ -2,11 +2,12 @@ package HomeWork5;
 
 import java.util.Scanner;
 
-public class CivilAirTr {
+public class CivilAirTr extends AirTransport {
     public int numPass;
     public boolean haveBuissClass;
 
-    public CivilAirTr(int numPass, boolean haveBuissClass) {
+    public CivilAirTr(int power, int maxSpeed, int weight, String model, int spamWings, int length, int numPass, boolean haveBuissClass) {
+        super(power, maxSpeed, weight, model, spamWings, length);
         this.numPass = numPass;
         this.haveBuissClass = haveBuissClass;
     }
@@ -20,5 +21,9 @@ public class CivilAirTr {
         } else {
             System.out.println("Вам нужен самолет побольше");
         }
+    }
+    public void allOptions(){
+        double powerKB = power*0.74;
+        System.out.printf("Мощность в л/с %s\n Мощность в Кв %s\n Максимальная скорость (км/ч)%s\n Масса (кг)%s\n Размах крыльев %s\n Минимальная длинна взлетно посадочной полосы %s\n Кол-во пассажиров %s\n Наличие бизнесс класса %s ",   power, powerKB, maxSpeed,  weight, model, spamWings, length, numPass, haveBuissClass );
     }
 }

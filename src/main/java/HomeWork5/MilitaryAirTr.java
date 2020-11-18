@@ -2,15 +2,16 @@ package HomeWork5;
 
 import java.util.Scanner;
 
-public class MilitaryAirTr {
+public class MilitaryAirTr extends AirTransport {
     public boolean ejectionSys;
     public int numOfRockets;
 
-    public MilitaryAirTr(boolean ejectionSys, int numOfRockets) {
+    public MilitaryAirTr(int power, int maxSpeed, int weight, String model, int spamWings, int length, boolean ejectionSys, int numOfRockets) {
+        super(power, maxSpeed, weight, model, spamWings, length);
         this.ejectionSys = ejectionSys;
         this.numOfRockets = numOfRockets;
-
     }
+
     public void shooting(int numOfRockets ){
        while (numOfRockets > 0){
            System.out.println("Стреляем капитан?");
@@ -32,5 +33,9 @@ public class MilitaryAirTr {
         }else {
             System.out.println("У Вас нет такой системы...");
         }
+    }
+    public void allOptions(){
+        double powerKB = power*0.74;
+        System.out.printf("Мощность в л/с %s\n Мощность в Кв %s\n Максимальная скорость (км/ч)%s\n Масса (кг)%s\n Размах крыльев %s\n Минимальная длинна взлетно посадочной полосы %s\n  Наличие системы катапультирования %s\n Кол-во ракет на борту %s ",   power, powerKB, maxSpeed,  weight, model, spamWings, length, ejectionSys, numOfRockets  );
     }
 }
