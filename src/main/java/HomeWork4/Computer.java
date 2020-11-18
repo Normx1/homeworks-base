@@ -11,7 +11,7 @@ class Computer {
     static private int numSource;
     int burnUp = 0;
 
-    private Computer(String CPU, String RAM, String HDD, int source) {
+    public Computer(String CPU, String RAM, String HDD, int source) {
         this.CPU = CPU;
         this.RAM = RAM;
         this.HDD = HDD;
