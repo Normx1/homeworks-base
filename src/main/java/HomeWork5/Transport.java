@@ -3,14 +3,14 @@ package HomeWork5;
 public class Transport {
 
     public int power;
-    public int maxPower;
+    public int maxSpeed;
     public int weight;
     public String model;
 
 
-    protected Transport(int power, int maxPower,int  weight, String model){
+    protected Transport(int power, int maxSpeed,int  weight, String model){
     this.power= power;
-    this.maxPower =maxPower;
+    this.maxSpeed =maxSpeed;
     this.weight = weight;
     this.model = model;
 

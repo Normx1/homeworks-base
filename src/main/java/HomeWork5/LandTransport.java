@@ -15,7 +15,7 @@ public class LandTransport extends Transport {
 //    }
 
     public void dispalayInfo(){
-        System.out.printf("Мощность: %s\nМаксимальная мощность: %s\nЧисло колес: %s\n ",power, maxPower, numOfWeels);
+        System.out.printf("Мощность: %s\nМаксимальная скорость: %s\nЧисло колес: %s\n ",power, maxSpeed, numOfWeels);
     }
     public static void main(String[] args){
 //        Transport transport = new Transport(12,20,5000,"bmw");
