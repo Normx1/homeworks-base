@@ -22,9 +22,12 @@ public class CivilAirTr extends AirTransport {
             System.out.println("Вам нужен самолет побольше");
         }
     }
-    public void allOptions(){
-        double powerKB = power*0.74;
-        System.out.printf(" Мощность в л/с %s\n Мощность в Кв %s\n Максимальная скорость (км/ч) %s\n Масса (кг) %s\n Модель %s\n Размах крыльев % м\n" +
-                " Минимальная длинна взлетно посадочной полосы %s м\n   Кол-во пассажиров %s\n Наличие бизнесс класса %s\n ",   power, powerKB, maxSpeed,  weight, model, spamWings, length, numPass, haveBuissClass );
+
+    public void allOptions() {
+        double powerKB = power * 0.74;
+        System.out.printf(" Мощность в л/с %s\n Мощность в Кв %s\n Максимальная скорость (км/ч) %s\n Масса (кг) %s\n Модель %s\n " +
+                "Размах крыльев %s\n Минимальная длинна взлетно посадочной полосы  %s м\n " +
+                "Количество пассажиров %s\n Наличие бизнес класса %s \n", power, powerKB, maxSpeed, weight, model, spamWings, length, numPass, haveBuissClass);
     }
+
 }
