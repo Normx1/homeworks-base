@@ -13,10 +13,10 @@ public class CivilAirTr extends AirTransport {
     }
 
     public void airPass(int numPass) {
-        System.out.println("Введите количество пассажиров:");
+        System.out.println("Введите необходимое количество пассажиров:");
         Scanner sc1 = new Scanner(System.in);
         int factNumPass = sc1.nextInt();
-        if (numPass <= factNumPass) {
+        if (numPass >= factNumPass) {
             System.out.println("Самолет загружен.");
         } else {
             System.out.println("Вам нужен самолет побольше");
@@ -24,6 +24,7 @@ public class CivilAirTr extends AirTransport {
     }
     public void allOptions(){
         double powerKB = power*0.74;
-        System.out.printf("Мощность в л/с %s\n Мощность в Кв %s\n Максимальная скорость (км/ч)%s\n Масса (кг)%s\n Размах крыльев %s\n Минимальная длинна взлетно посадочной полосы %s\n Кол-во пассажиров %s\n Наличие бизнесс класса %s ",   power, powerKB, maxSpeed,  weight, model, spamWings, length, numPass, haveBuissClass );
+        System.out.printf(" Мощность в л/с %s\n Мощность в Кв %s\n Максимальная скорость (км/ч) %s\n Масса (кг) %s\n Модель %s\n Размах крыльев %s\n м" +
+                " Минимальная длинна взлетно посадочной полосы %s\n мю Кол-во пассажиров %s\n Наличие бизнесс класса %s\n ",   power, powerKB, maxSpeed,  weight, model, spamWings, length, numPass, haveBuissClass );
     }
 }

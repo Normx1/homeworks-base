@@ -36,6 +36,8 @@ public class MilitaryAirTr extends AirTransport {
     }
     public void allOptions(){
         double powerKB = power*0.74;
-        System.out.printf("Мощность в л/с %s\n Мощность в Кв %s\n Максимальная скорость (км/ч)%s\n Масса (кг)%s\n Размах крыльев %s\n Минимальная длинна взлетно посадочной полосы %s\n  Наличие системы катапультирования %s\n Кол-во ракет на борту %s ",   power, powerKB, maxSpeed,  weight, model, spamWings, length, ejectionSys, numOfRockets  );
+        System.out.printf(" Мощность в л/с %s\n Мощность в Кв %s\n Максимальная скорость (км/ч) %s\n Масса (кг) %s\n Модель %s\n " +
+                "Размах крыльев %s\n Минимальная длинна взлетно посадочной полосы  %s м\n " +
+                "Наличие системы катапультирования %s\n Кол-во ракет на борту %s \n",   power, powerKB, maxSpeed,  weight, model, spamWings, length, ejectionSys, numOfRockets  );
     }
 }

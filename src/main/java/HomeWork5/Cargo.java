@@ -11,10 +11,10 @@ public class Cargo extends LandTransport {
     }
 
     public void carMass(int carrying){
-        System.out.println("Введите грузоподъемность:");
+        System.out.println("Введите массу груза:");
         Scanner sc1= new Scanner(System.in);
         int weightСargo = sc1.nextInt();
-        if (carrying <= weightСargo){
+        if (carrying >= weightСargo){
             System.out.println("Грузовик загружен.");
         }else{
             System.out.println("Вам нужен грузовик побольше");
@@ -23,6 +23,7 @@ public class Cargo extends LandTransport {
     }
     public void allOptions(){
         double powerKB = power*0.74;
-        System.out.printf("Мощность в л/с %s\n Мощность в Кв %s\n Максимальная скорость (км/ч)%s\n Масса (кг)%s\n Марка Количество колес%s\n Расход топлива (л/100км)%s\n Грузоподъемность %s\n",   power, powerKB, maxSpeed,  weight, model, numOfWeels,  fuelCons, carrying );
+        System.out.printf(" Мощность в л/с %s\n Мощность в Кв %s\n Максимальная скорость (км/ч) %s\n Масса (кг)%s\n Марка %s\n " +
+                "Количество колес %s\n Расход топлива (л/100км) %s\n Грузоподъемность %s кг\n",   power, powerKB, maxSpeed,  weight, model, numOfWeels,  fuelCons, carrying );
     }
 }
