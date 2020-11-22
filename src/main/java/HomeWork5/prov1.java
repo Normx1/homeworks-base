@@ -13,16 +13,16 @@ public class prov1 {
 //        CarCargo.allOptions();
 //        CarCargo.carMass(CarCargo.carrying);
 //
-        System.out.println("Гражданский самолет");
-        CivilAirTr Airplane = new CivilAirTr(5000,800,3000,"Boing 744",15, 300, 20, false );
-        Airplane.allOptions();
-        Airplane.airPass(Airplane.numPass);
-//
-//        System.out.println("Военный самолет");
-//        MilitaryAirTr Air = new MilitaryAirTr(10000, 2000,6000,"Splinter",30,100,true, 5);
-//        Air.allOptions();
-//        Air.shooting(Air.numOfRockets);
-//        Air.ejSys(Air.ejectionSys);
+//        System.out.println("Гражданский самолет");
+//        CivilAirTr Airplane = new CivilAirTr(5000,800,3000,"Boing 744",15, 300, 20, false );
+//        Airplane.allOptions();
+//        Airplane.airPass(Airplane.numPass);
+
+        System.out.println("Военный самолет");
+        MilitaryAirTr Air = new MilitaryAirTr(10000, 2000,6000,"Splinter",30,100,true, 5);
+        Air.allOptions();
+        Air.shooting(Air.numOfRockets);
+        Air.ejSys(Air.ejectionSys);
 
 
     }
