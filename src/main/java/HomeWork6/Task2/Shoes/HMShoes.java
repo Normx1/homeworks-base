@@ -4,11 +4,11 @@ public class HMShoes  implements Shoes{
 
     @Override
     public void putOn(){
-        System.out.println("Надеть обувь HM");
+        System.out.println("Надел обувь HM");
     }
 
     @Override
     public void takeOff(){
-        System.out.println("Снять обувь НМ");
+        System.out.println("Снял обувь НМ");
     }
 }
