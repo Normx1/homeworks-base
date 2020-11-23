@@ -5,27 +5,17 @@ import java.util.Scanner;
 
 public class Computer {
     public static void main(String[] args) {
-   //     Ncomp();
+        Vkl();
+        Close();
+
     }
         // Метод описания
-    static void dyspalayInfo() {
-            System.out.println("Введите процессор: ");
-            Scanner sc1= new Scanner(System.in);
-            String processor = sc1.nextLine();
-            System.out.println("Введите оперативную память: ");
-            Scanner sc2= new Scanner(System.in);
-            String ram = sc2.nextLine();
-            System.out.println("Введите жесткий диск: ");
-            Scanner sc3= new Scanner(System.in);
-            String hardDrive = sc3.nextLine();
-            System.out.println("Введите количество циклов работы: ");
-            Scanner sc4= new Scanner(System.in);
-            int resource = sc3.nextInt();
-
+    static void dyspalayInfo(String processor , String ram, String hardDrive, int resource) {
             System.out.printf("Processor: %c \n + ram: %d\n+ +Hard Drive %e\n+ resource: %f\n ", processor , ram, hardDrive, resource);
+
         }
 
-    static void Vkl(int b) {
+    static void Vkl() {
             int rand = 0;
             int vvod = 0;
             String vkl;
