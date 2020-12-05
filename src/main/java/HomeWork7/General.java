@@ -6,9 +6,9 @@ public class General {
     public static void main(String[] args)  {
         ArrayList<ArrayList> a = new ArrayList<>();
         Input.Vvod(a);
-        Сonclusion.VyvodArrArr(a);
+//        Сonclusion.VyvodArrArr(a);
         while (true) {
-            Input.Vvod(a);
+            Sort.Sort(a,Input.Vvod(a));
             Сonclusion.VyvodArrArr(a);
         }
     }

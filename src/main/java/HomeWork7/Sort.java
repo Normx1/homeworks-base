@@ -39,7 +39,7 @@ public class Sort {
                     nom = i;
                 }
             }
-            a.add(nom + 1, a.get(a.size()-1));
+            a.add(nom + 1, arr2);
         }
 
     }
@@ -103,6 +103,7 @@ public class Sort {
         a.add(arr2);
         a.add(arr3);
         a.add(arr4);
+        a.add(arr5);
         Sort(a,arr1);
 //        Sort(a) ;
         Сonclusion.VyvodArrArr(a);

@@ -24,9 +24,9 @@ public class Сonclusion {
                 return;
             } else {
                 numEquals++;
-            }
-            if (numEquals == arr1.size()) {
-                addArr(arr1, arr2);
+//            }
+//            if (numEquals == arr1.size()) {
+//                addArr(arr1, arr2);
             }
         }
 //        System.out.println();
