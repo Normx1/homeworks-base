@@ -5,16 +5,16 @@ import java.util.Scanner;
 
 public class Input {
 
-    public static ArrayList<String> Vvod(ArrayList a) {
+    public static ArrayList<String> Vvod(ArrayList mainArr) {
         ArrayList<String> arr1 = new ArrayList<>();
         Scanner sc1 = new Scanner(System.in);
         String per = sc1.nextLine();
         if (per.equals("print")) {
-            Сonclusion.Сonclusion(a);
-            System.out.println(a);
-            MyException.myExp1();//для вывода всего пути
+            Сonclusion.Сonclusion(mainArr);
+            throw  new ArithmeticException();//для вывода всего пути
         } else if (per.equals("")) {//против пустой строки
-            MyException.myExp2();
+            System.out.println("Вы ввели пустую строку");
+            throw  new ArithmeticException();
         } else {
             String[] arr = per.split("/");
             for (int i = 0; i < arr.length; i++) {
@@ -31,7 +31,7 @@ public class Input {
                     truth = Сonclusion.PointSearch(arr1.get(i));
                 } else {
 //                System.out.println("Запрещено создавать в файле каталоги и другие файлы!");
-                    MyException.myExc();
+                    throw  new NullPointerException();
                 }
             }
 

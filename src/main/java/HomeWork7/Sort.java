@@ -4,48 +4,41 @@ import java.util.ArrayList;
 
 
 public class Sort {
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == this) {
-        }
-        return true;
-    }
 
     // Данный метод добавляет массив и производит сортировку на наличие совпадений, добавляет новые элементы в порядке согласно
     // количеству совпадений.
     // Прим- до начала уже должен существовать Главный ArrayList с 1м массивом внутри.
-    public static void Sort(ArrayList<ArrayList> a, ArrayList arr2) {
+    public static void Sort(ArrayList<ArrayList> mainArr, ArrayList arr2) {
         ArrayList<Object> arrSort = new ArrayList<>(6);
-        ArrayList<ArrayList> aNew = new ArrayList<>();
         int t = 0;
-        for (int i = 0; i < a.size(); i++) {
-            int k = 0;
+        for (int i = 0; i < mainArr.size(); i++) {
+            int numEquals = 0;
 
-            ArrayList arr1 = a.get(i);
+            ArrayList arr1 = mainArr.get(i);
             for (int j = 0; j < arr1.size(); j++) {
-                if (((arr1.get(j)).equals(arr2.get(j)))) {
-                    k++;
-                    if (k == arr1.size()) {
-                        arrSort.add(k);
+                if (((arr1.get(j))==(arr2.get(j)))) {
+                    numEquals++;
+                    if (numEquals == arr1.size()) {
+                        arrSort.add(numEquals);
                         Сonclusion.addArrBig(arr1, arr2);// добавлен метод добавляющий в массив новые элементы если они равны и второй больше первого.
                         t = -1;
                     }
                 } else {
-                    arrSort.add(k);
+                    arrSort.add(numEquals);
                     break;
                 }
             }
         }
         if (t != -1) {
             int maxInd = 0;
-            int nom = 0;
+            int nomArr2InMainArr = 0;
             for (int i = 0; i < arrSort.size(); i++) {
                 if ((Integer) arrSort.get(i) >= maxInd) {
                     maxInd = (Integer) arrSort.get(i);
-                    nom = i;
+                    nomArr2InMainArr = i;
                 }
             }
-            a.add(nom + 1, arr2);
+            mainArr.add(nomArr2InMainArr + 1, arr2);
         }
 
     }

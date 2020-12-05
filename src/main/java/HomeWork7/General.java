@@ -24,18 +24,18 @@ public class General {
 // root/folder2/file.txt/file.txt
     public static void main(String[] args) {
 
-        ArrayList<ArrayList> a = new ArrayList<>(10);
-        ArrayList arr1 = Input.Vvod((ArrayList) a);
-        a.add(arr1);
+        ArrayList<ArrayList> mainArr = new ArrayList<>(10);
+        ArrayList arr1 = Input.Vvod((ArrayList) mainArr);
+        mainArr.add(arr1);
         while (true) {
             try {
-                arr1 = Input.Vvod((ArrayList) a);
-                Sort.Sort(a, arr1);
+                arr1 = Input.Vvod((ArrayList) mainArr);
             } catch (NullPointerException e) {
                 System.out.println("Запрещено создавать в файле каталоги и другие файлы!");
 
             } catch (ArithmeticException e) {
             }
+            Sort.Sort(mainArr, arr1);
         }
     }
 }

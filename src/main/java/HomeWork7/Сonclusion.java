@@ -13,7 +13,6 @@ public class Сonclusion {
 
     public static void vyvodBezPovt(ArrayList arr1, ArrayList arr2) {
         for (int i = 0; i < arr1.size(); i++) {
-            int numEquals = 0;
             if (!arr1.get(i).equals(arr2.get(i))) {
                 for (int j = i; j < arr2.size(); j++) {
                     for (int k = 0; k < j; k++) {
@@ -22,13 +21,10 @@ public class Сonclusion {
                     System.out.println(arr2.get(j));
                 }
                 return;
-            } else {
-                numEquals++;
-
             }
         }
     }
-
+//используется при первом выводе массива
     public static void vyvod(ArrayList a) {
         int  k = a.size();
         for (int i = 0; i < a.size() ; i++) {
@@ -42,28 +38,7 @@ public class Сonclusion {
         }
     }
 
-    // Если массивы совпадают,  то к массиву добавляется новые элементы.
-    public static void addArr(ArrayList<ArrayList> a, ArrayList arr2) {
-        for (int l = 0; l < a.size(); l++) {
-            ArrayList arr1 = a.get(l);
-            int k = 0;
-            for (int i = 0; i < arr1.size(); i++) {
-                if (((arr1.get(i)).equals(arr2.get(i)))) {
-                    k++;
-                    if (k == arr1.size() - 1) {
-                        if (arr2.size() > arr1.size()) {
-                            for (int j = arr1.size(); j < arr2.size(); j++) {
-                                arr1.add(arr2.get(j));
-                            }
-//        } else if ((arr2.size() == arr1.size())) {
-//            System.out.println("Такое значение уже есть");
 
-                        }
-                    }
-                }
-            }
-        }
-    }
     //Поиск точки и определение является ли строка файлом.
     public static boolean PointSearch(String a) {
         int index = a.indexOf('.');
