@@ -48,7 +48,6 @@ public class Сonclusion {
             ArrayList arr1 = a.get(l);
             int k = 0;
             for (int i = 0; i < arr1.size(); i++) {
-
                 if (((arr1.get(i)).equals(arr2.get(i)))) {
                     k++;
                     if (k == arr1.size() - 1) {

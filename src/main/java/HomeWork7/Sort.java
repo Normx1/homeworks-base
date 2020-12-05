@@ -20,14 +20,13 @@ public class Sort {
         for (int i = 0; i < a.size(); i++) {
             int k = 0;
 
-//            int nom = 0;
             ArrayList arr1 = a.get(i);
              for (int j = 0; j < arr1.size(); j++) {
                 if (((arr1.get(j)).equals(arr2.get(j)))) {
                     k++;
                     if (k == arr1.size() ) {
                         arrSort.add(k);
-                        Сonclusion.addArr(arr1, arr2);// добавлен метод добовляющий в массив новые элементы.
+                        Сonclusion.addArrBig(arr1, arr2);// добавлен метод добовляющий в массив новые элементы.
                         t = -1;
                     }
                 } else {
@@ -64,6 +63,7 @@ public class Sort {
         ArrayList<Object> arr3 = new ArrayList<>(10);
         ArrayList<Object> arr4 = new ArrayList<>(10);
         ArrayList<Object> arr5 = new ArrayList<>(10);
+        ArrayList<Object> arr6 = new ArrayList<>(10);
 
 
         ArrayList arr1 = Input.Vvod((ArrayList) a);
@@ -107,15 +107,25 @@ public class Sort {
         arr5.add("packeg7/");
         arr5.add("packeg8/");
 
+        arr6.add("root");
+        arr6.add("packeg2/");
+        arr6.add("packeg3/");
+        arr6.add("packeg4/");
+        arr6.add("packeg5/");
+        arr6.add("packeg6/");
+        arr6.add("packeg7/");
+        arr6.add("packeg8/");
+
 
         a.add(arr1);
-        a.add(arr2);
-        a.add(arr3);
-        a.add(arr4);
-        a.add(arr5);
-        Sort(a,arr1);
+        Sort(a,arr2);
+         Sort(a,arr3);
+         Sort(a,arr4);
+         Sort(a,arr6);
+         Sort(a,arr5);
 //        Sort(a) ;
         Сonclusion.VyvodArrArr(a);
+        System.out.println(a);
 
 //        Sort(a );
 //        Sort(a );

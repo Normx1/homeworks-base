@@ -3,7 +3,7 @@ package HomeWork7;
 import java.util.ArrayList;
 
 public class ArrEq {
-
+// проверка на наличие
     public static Boolean Prov1(ArrayList a, ArrayList a3) {
         int k = 0;
         for (int i = 0; i < a.size(); i++) {
@@ -41,5 +41,5 @@ public class ArrEq {
     }
 }
 //root/folder2/file.txt
-//root/folder2/folder2/file.txt
+//root/folder2/folder2/fitxtle.
 // root/folder2/file.txt/file.txt
