@@ -40,6 +40,9 @@ public class ArrEq {
         System.out.println(a);
     }
 }
+//root/folder1/file.txt
 //root/folder2/file.txt
+//root/folder3/file.txt
+//root/folder2/retun/file.txt
 //root/folder2/folder2/fitxtle.
-// root/folder2/file.txt/file.txt
+// root/folder2/retun/return2/ file.txt

@@ -59,14 +59,19 @@ public class Sort {
     public static void main(String[] args) {
             ArrayList<ArrayList> a = new ArrayList<>(10);
 //        ArrayList<Object> arr1 = new ArrayList<>(5);
-        ArrayList<Object> arr2 = new ArrayList<>(10);
-        ArrayList<Object> arr3 = new ArrayList<>(10);
-        ArrayList<Object> arr4 = new ArrayList<>(10);
-        ArrayList<Object> arr5 = new ArrayList<>(10);
-        ArrayList<Object> arr6 = new ArrayList<>(10);
+//        ArrayList<Object> arr2 = new ArrayList<>(10);
+//        ArrayList<Object> arr3 = new ArrayList<>(10);
+//        ArrayList<Object> arr4 = new ArrayList<>(10);
+//        ArrayList<Object> arr5 = new ArrayList<>(10);
+//        ArrayList<Object> arr6 = new ArrayList<>(10);
 
 
         ArrayList arr1 = Input.Vvod((ArrayList) a);
+        ArrayList arr2 = Input.Vvod((ArrayList) a);
+        ArrayList arr3 = Input.Vvod((ArrayList) a);
+        ArrayList arr4 = Input.Vvod((ArrayList) a);
+        ArrayList arr5 = Input.Vvod((ArrayList) a);
+        ArrayList arr6 = Input.Vvod((ArrayList) a);
 
 //        arr1.add("root");
 //        arr1.add("packeg1/");
@@ -75,46 +80,46 @@ public class Sort {
 //        arr1.add("packeg4/");
 //        arr1.add("packeg5/");
 
-        arr2.add("root");
-        arr2.add("packeg1/");
-        arr2.add("packeg3/");
-        arr2.add("packeg4/");
-        arr2.add("packeg5/");
-        arr2.add("packeg6/");
-
-        arr3.add("root");
-        arr3.add("packeg2/");
-        arr3.add("packeg3/");
-        arr3.add("packeg4/");
-        arr3.add("packeg5/");
-        arr3.add("packeg4/");
-
-        arr4.add("root");
-        arr4.add("packeg2/");
-        arr4.add("packeg3/");
-        arr4.add("packeg4/");
-        arr4.add("packeg5/");
-        arr4.add("packeg6/");
-//        arr4.add("packeg7/");
-//        arr4.add("packeg8/");
-
-        arr5.add("root");
-        arr5.add("packeg2/");
-        arr5.add("packeg3/");
-        arr5.add("packeg4/");
-        arr5.add("packeg5/");
-        arr5.add("packeg6/");
-        arr5.add("packeg7/");
-        arr5.add("packeg8/");
-
-        arr6.add("root");
-        arr6.add("packeg2/");
-        arr6.add("packeg3/");
-        arr6.add("packeg4/");
-        arr6.add("packeg5/");
-        arr6.add("packeg6/");
-        arr6.add("packeg7/");
-        arr6.add("packeg8/");
+//        arr2.add("root");
+//        arr2.add("packeg1/");
+//        arr2.add("packeg3/");
+//        arr2.add("packeg4/");
+//        arr2.add("packeg5/");
+//        arr2.add("packeg6/");
+//
+//        arr3.add("root");
+//        arr3.add("packeg2/");
+//        arr3.add("packeg3/");
+//        arr3.add("packeg4/");
+//        arr3.add("packeg5/");
+//        arr3.add("packeg4/");
+//
+//        arr4.add("root");
+//        arr4.add("packeg2/");
+//        arr4.add("packeg3/");
+//        arr4.add("packeg4/");
+//        arr4.add("packeg5/");
+//        arr4.add("packeg6/");
+////        arr4.add("packeg7/");
+////        arr4.add("packeg8/");
+//
+//        arr5.add("root");
+//        arr5.add("packeg2/");
+//        arr5.add("packeg3/");
+//        arr5.add("packeg4/");
+//        arr5.add("packeg5/");
+//        arr5.add("packeg6/");
+//        arr5.add("packeg7/");
+//        arr5.add("packeg8/");
+//
+//        arr6.add("root");
+//        arr6.add("packeg2/");
+//        arr6.add("packeg3/");
+//        arr6.add("packeg4/");
+//        arr6.add("packeg5/");
+//        arr6.add("packeg6/");
+//        arr6.add("packeg7/");
+//        arr6.add("packeg8/");
 
 
         a.add(arr1);
@@ -124,7 +129,10 @@ public class Sort {
          Sort(a,arr6);
          Sort(a,arr5);
 //        Sort(a) ;
-        Сonclusion.VyvodArrArr(a);
+        for (int i = 0; i < a.size()-1; i++) {
+            Сonclusion.vyvodBezPovt(a.get(i), a.get(i+1));
+        }
+
         System.out.println(a);
 
 //        Sort(a );

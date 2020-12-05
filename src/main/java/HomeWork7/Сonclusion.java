@@ -14,7 +14,7 @@ public class Сonclusion {
     public static void vyvodBezPovt(ArrayList arr1, ArrayList arr2) {
         for (int i = 0; i < arr1.size(); i++) {
             int numEquals = 0;
-            if (arr1.get(i) != arr2.get(i)) {
+            if (!arr1.get(i).equals(arr2.get(i))) {
                 for (int j = i; j < arr2.size(); j++) {
                     for (int k = 0; k < j; k++) {
                         System.out.print("\t");
