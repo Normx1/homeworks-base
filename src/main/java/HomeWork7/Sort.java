@@ -19,7 +19,7 @@ public class Sort {
                     k++;
                     if (k == arr.size() & arr4.size()>=arr.size()) {
                         arrSort.add(k);
-                        VyvodMass.addArr(arr, arr4);// добавлен метод добовляющий в массив новые элементы.
+                        Сonclusion.addArr(arr, arr4);// добавлен метод добовляющий в массив новые элементы.
                         t = -1;
                         return;
                     }
@@ -99,7 +99,7 @@ public class Sort {
 
         a.add(arr1);
         Sort(a, arr3);
-        VyvodMass.VyvodArrArr(a);
+        Сonclusion.VyvodArrArr(a);
         Sort(a, arr2);
 //        VyvodMass.VyvodArrArr(a);
 

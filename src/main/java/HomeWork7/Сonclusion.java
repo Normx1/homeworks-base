@@ -6,9 +6,7 @@ public class Сonclusion {
     public static void VyvodArrArr(ArrayList a) {
         vyvod((ArrayList) a.get(0));
         for (int i = 0; i < a.size(); i++) {
-            if (Povt.prov(a, (ArrayList) a.get(i)) != false) {
-                vyvodBezPovt((ArrayList) a.get(0), (ArrayList) a.get(i));
-            }
+            vyvodBezPovt((ArrayList) a.get(0), (ArrayList) a.get(i));
         }
     }
 
@@ -50,7 +48,7 @@ public class Сonclusion {
             for (int i = arr1.size(); i < arr2.size(); i++) {
                 arr1.add(arr2.get(i));
             }
-        }else if((arr2.size() == arr1.size())) {
+        } else if ((arr2.size() == arr1.size())) {
             System.out.println("Такое значение уже есть");
 
         }
@@ -67,6 +65,7 @@ public class Сonclusion {
             return false;
         }
     }
+
     // Если массивы совпадают,  то к массиву добавляется новые элементы.
     public static void addArrBig(ArrayList arr1, ArrayList arr2) {
         if (arr2.size() > arr1.size()) {
@@ -74,4 +73,5 @@ public class Сonclusion {
                 arr1.add(arr2.get(i));
             }
         }
+    }
 }

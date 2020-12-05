@@ -17,7 +17,7 @@ public class Input {
         while (true) {
             for (int i = 0; i < arr1.size() ; i++) {
                 if (truth != false) {
-                    truth = VyvodMass.PointSearch(arr1.get(i));
+                    truth = Сonclusion.PointSearch(arr1.get(i));
                 } else {
                     System.out.println("Запрещено создавать в файле каталоги и другие файлы!");
                     return a;
