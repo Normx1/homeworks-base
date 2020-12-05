@@ -6,20 +6,21 @@ public class Sort {
     // Данный метод добавляет массив и производит сортировку на наличие совпадений, добавляет новые элементы в порядке согласно
     // количеству совпадений.
     // Прим- до начала уже должен существовать Главный ArrayList с 1м массивом внутри.
-    public static void Sort(ArrayList<ArrayList> a, ArrayList arr4) throws MyException {
+    public static void Sort(ArrayList<ArrayList> a) throws MyException {
         ArrayList<Object> arrSort = new ArrayList<>(6);
         int t = 0;
-        for (int i = 0; i < a.size(); i++) {
+        for (int i = 0; i < a.size()-1; i++) {
             int k = 0;
 
 //            int nom = 0;
-            ArrayList arr = a.get(i);
-            for (int j = 0; j < arr.size(); j++) {
-                if (((arr.get(j)).equals(arr4.get(j)))) {
+            ArrayList arr1 = a.get(i);
+            ArrayList  arr2 = a.get(i+1);
+            for (int j = 0; j < arr1.size()-1; j++) {
+                if (((arr1.get(j)).equals(arr2.get(j)))) {
                     k++;
-                    if (k == arr.size() & arr4.size()>=arr.size()) {
+                    if (k == arr1.size() ) {
                         arrSort.add(k);
-                        Сonclusion.addArr(arr, arr4);// добавлен метод добовляющий в массив новые элементы.
+//                        Сonclusion.addArr(arr1, arr2);// добавлен метод добовляющий в массив новые элементы.
                         t = -1;
                         return;
                     }
@@ -38,8 +39,9 @@ public class Sort {
                     nom = i;
                 }
             }
-            a.add(nom + 1, arr4);
+            a.add(nom + 1, a.get(a.size()-1));
         }
+
     }
 
     //        System.out.println("arrsort- "+ arrSort);
@@ -98,13 +100,15 @@ public class Sort {
 
 
         a.add(arr1);
-        Sort(a, arr3);
+        a.add(arr2);
+        a.add(arr3);
+        a.add(arr4);
+        Sort(a);
+//        Sort(a) ;
         Сonclusion.VyvodArrArr(a);
-        Sort(a, arr2);
-//        VyvodMass.VyvodArrArr(a);
 
-        Sort(a, arr4);
-        Sort(a, arr5);
+//        Sort(a );
+//        Sort(a );
 
 //        VyvodMass.VyvodArrArr(a);
         System.out.println(a);

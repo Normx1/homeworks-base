@@ -8,9 +8,11 @@ public class General {
         Input.Vvod(a);
         Сonclusion.VyvodArrArr(a);
         while (true) {
-            Sort.Sort(a,Input.Vvod(a));
+            Input.Vvod(a);
             Сonclusion.VyvodArrArr(a);
         }
     }
 }
-
+//root/folder2/file.txt
+//root/folder2/folder2/file.txt
+// root/folder2/file.txt/file.txt
