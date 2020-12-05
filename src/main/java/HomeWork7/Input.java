@@ -19,6 +19,7 @@ public class Input {
             if (truth != false) {
                 truth = Сonclusion.PointSearch(arr1.get(i));
             } else {
+                System.out.println("Запрещено создавать в файле каталоги и другие файлы!");
                 MyException.myExc();
             }
         }
@@ -32,10 +33,10 @@ public class Input {
             try {
                 a.add(Vvod(a));
                 Сonclusion.VyvodArrArr(a);
+
             } catch (NullPointerException e) {
                 System.out.println("Запрещено создавать в файле каталоги и другие файлы!");
-                System.out.println(a);
-            }
+             }
         }
     }
 }

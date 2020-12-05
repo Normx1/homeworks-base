@@ -2,7 +2,14 @@ package HomeWork7;
 
 import java.util.ArrayList;
 
+
 public class Sort {
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) {
+        }
+        return true;
+    }
     // Данный метод добавляет массив и производит сортировку на наличие совпадений, добавляет новые элементы в порядке согласно
     // количеству совпадений.
     // Прим- до начала уже должен существовать Главный ArrayList с 1м массивом внутри.
@@ -20,9 +27,8 @@ public class Sort {
                     k++;
                     if (k == arr1.size() ) {
                         arrSort.add(k);
-//                        Сonclusion.addArr(arr1, arr2);// добавлен метод добовляющий в массив новые элементы.
+                        Сonclusion.addArr(arr1, arr2);// добавлен метод добовляющий в массив новые элементы.
                         t = -1;
-                        return;
                     }
                 } else {
                     arrSort.add(k);
@@ -53,18 +59,21 @@ public class Sort {
 
     public static void main(String[] args) {
             ArrayList<ArrayList> a = new ArrayList<>(10);
-        ArrayList<Object> arr1 = new ArrayList<>(5);
+//        ArrayList<Object> arr1 = new ArrayList<>(5);
         ArrayList<Object> arr2 = new ArrayList<>(10);
         ArrayList<Object> arr3 = new ArrayList<>(10);
         ArrayList<Object> arr4 = new ArrayList<>(10);
         ArrayList<Object> arr5 = new ArrayList<>(10);
 
-        arr1.add("root");
-        arr1.add("packeg1/");
-        arr1.add("packeg2/");
-        arr1.add("packeg3/");
-        arr1.add("packeg4/");
-        arr1.add("packeg5/");
+
+        ArrayList arr1 = Input.Vvod((ArrayList) a);
+
+//        arr1.add("root");
+//        arr1.add("packeg1/");
+//        arr1.add("packeg2/");
+//        arr1.add("packeg3/");
+//        arr1.add("packeg4/");
+//        arr1.add("packeg5/");
 
         arr2.add("root");
         arr2.add("packeg1/");
@@ -78,7 +87,7 @@ public class Sort {
         arr3.add("packeg3/");
         arr3.add("packeg4/");
         arr3.add("packeg5/");
-        arr3.add("packeg6/");
+        arr3.add("packeg4/");
 
         arr4.add("root");
         arr4.add("packeg2/");
@@ -86,8 +95,8 @@ public class Sort {
         arr4.add("packeg4/");
         arr4.add("packeg5/");
         arr4.add("packeg6/");
-        arr4.add("packeg7/");
-        arr4.add("packeg8/");
+//        arr4.add("packeg7/");
+//        arr4.add("packeg8/");
 
         arr5.add("root");
         arr5.add("packeg2/");
@@ -111,8 +120,9 @@ public class Sort {
 //        Sort(a );
 //        Sort(a );
 
-//        VyvodMass.VyvodArrArr(a);
-        System.out.println(a);
+//        System.out.println(a);
 
     }
+
+
 }

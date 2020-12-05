@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class General {
     public static void main(String[] args)  {
-        ArrayList<ArrayList> a = new ArrayList<>();
+        ArrayList<ArrayList> a = new ArrayList<>(5);
         Input.Vvod(a);
 //        Сonclusion.VyvodArrArr(a);
         while (true) {

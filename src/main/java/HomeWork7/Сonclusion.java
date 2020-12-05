@@ -48,8 +48,8 @@ public class Сonclusion {
             for (int i = arr1.size(); i < arr2.size(); i++) {
                 arr1.add(arr2.get(i));
             }
-        } else if ((arr2.size() == arr1.size())) {
-            System.out.println("Такое значение уже есть");
+//        } else if ((arr2.size() == arr1.size())) {
+//            System.out.println("Такое значение уже есть");
 
         }
     }
