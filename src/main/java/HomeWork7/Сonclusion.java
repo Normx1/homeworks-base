@@ -43,17 +43,28 @@ public class Сonclusion {
     }
 
     // Если массивы совпадают,  то к массиву добавляется новые элементы.
-    public static void addArr(ArrayList arr1, ArrayList arr2) {
-        if (arr2.size() > arr1.size()) {
-            for (int i = arr1.size(); i < arr2.size(); i++) {
-                arr1.add(arr2.get(i));
-            }
+    public static void addArr(ArrayList<ArrayList> a, ArrayList arr2) {
+        for (int l = 0; l < a.size(); l++) {
+            ArrayList arr1 = a.get(l);
+            int k = 0;
+            for (int i = 0; i < arr1.size(); i++) {
+
+                if (((arr1.get(i)).equals(arr2.get(i)))) {
+                    k++;
+                    if (k == arr1.size() - 1) {
+                        if (arr2.size() > arr1.size()) {
+                            for (int j = arr1.size(); j < arr2.size(); j++) {
+                                arr1.add(arr2.get(j));
+                            }
 //        } else if ((arr2.size() == arr1.size())) {
 //            System.out.println("Такое значение уже есть");
 
+                        }
+                    }
+                }
+            }
         }
     }
-
     //Поиск точки и определение является ли строка файлом.
     public static boolean PointSearch(String a) {
         int index = a.indexOf('.');

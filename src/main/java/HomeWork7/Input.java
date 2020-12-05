@@ -25,6 +25,16 @@ public class Input {
         }
         return arr1;
     }
+    public static ArrayList<String> Vvod( ) {
+        ArrayList<String> arr1 = new ArrayList<>();
+        Scanner sc1 = new Scanner(System.in);
+        String per = sc1.nextLine();
+        String[] arr = per.split("/");
+        for (int i = 0; i < arr.length; i++) {
+            arr1.add(arr[i] + "/");
+        }
+        return arr1;
+    }
 
     public static void main(String[] args) {
         ArrayList<ArrayList> a = new ArrayList<>();
