@@ -13,29 +13,29 @@ public class Input {
         for (int i = 0; i < arr.length; i++) {
             arr1.add(arr[i] + "/");
         }
-//        Boolean truth = true;
-//        while (true) {
-//            for (int i = 0; i < arr1.size(); i++) {
-//                if (truth != false) {
-//                    truth = Сonclusion.PointSearch(arr1.get(i));
-//                } else {
-//                    System.out.println("Запрещено создавать в файле каталоги и другие файлы!");
-//                    return a;
-//                    // можно попробовать здесь вызвать ошибку
-//                }
-//            }
-//                 a.add(arr1);
-////            VyvodMass.VyvodArrArr(a);
-//            break;
+        Boolean truth = true;
 
+        for (int i = 0; i < arr1.size(); i++) {
+            if (truth != false) {
+                truth = Сonclusion.PointSearch(arr1.get(i));
+            } else {
+                MyException.myExc();
+            }
+        }
         return arr1;
     }
 
     public static void main(String[] args) {
         ArrayList<ArrayList> a = new ArrayList<>();
+
         while (true) {
-            a.add(Vvod(a));
-            Сonclusion.VyvodArrArr(a);
+            try {
+                a.add(Vvod(a));
+                Сonclusion.VyvodArrArr(a);
+            } catch (NullPointerException e) {
+                System.out.println("Запрещено создавать в файле каталоги и другие файлы!");
+                System.out.println(a);
+            }
         }
     }
 }
