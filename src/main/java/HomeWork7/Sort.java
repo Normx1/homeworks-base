@@ -68,10 +68,10 @@ public class Sort {
 
         ArrayList arr1 = Input.Vvod((ArrayList) a);
         ArrayList arr2 = Input.Vvod((ArrayList) a);
-        ArrayList arr3 = Input.Vvod((ArrayList) a);
-        ArrayList arr4 = Input.Vvod((ArrayList) a);
-        ArrayList arr5 = Input.Vvod((ArrayList) a);
-        ArrayList arr6 = Input.Vvod((ArrayList) a);
+//        ArrayList arr3 = Input.Vvod((ArrayList) a);
+//        ArrayList arr4 = Input.Vvod((ArrayList) a);
+//        ArrayList arr5 = Input.Vvod((ArrayList) a);
+//        ArrayList arr6 = Input.Vvod((ArrayList) a);
 
 //        arr1.add("root");
 //        arr1.add("packeg1/");
@@ -124,11 +124,12 @@ public class Sort {
 
         a.add(arr1);
         Sort(a,arr2);
-         Sort(a,arr3);
-         Sort(a,arr4);
-         Sort(a,arr6);
-         Sort(a,arr5);
+//         Sort(a,arr3);
+//         Sort(a,arr4);
+//         Sort(a,arr6);
+//         Sort(a,arr5);
 //        Sort(a) ;
+        Сonclusion.vyvod(arr1);
         for (int i = 0; i < a.size()-1; i++) {
             Сonclusion.vyvodBezPovt(a.get(i), a.get(i+1));
         }

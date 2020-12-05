@@ -44,5 +44,5 @@ public class ArrEq {
 //root/folder2/file.txt
 //root/folder3/file.txt
 //root/folder2/retun/file.txt
-//root/folder2/folder2/fitxtle.
+//root/folder2/retun/file.txt
 // root/folder2/retun/return2/ file.txt
