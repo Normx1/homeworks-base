@@ -3,7 +3,7 @@ package HomeWork7;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Vvod {
+public class Input {
 
     public static ArrayList<String> Vvod(ArrayList a) {
         ArrayList<String> arr1 = new ArrayList<>();
