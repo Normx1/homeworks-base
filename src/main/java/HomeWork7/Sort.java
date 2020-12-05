@@ -6,16 +6,16 @@ public class Sort {
     // Данный метод добавляет массив и производит сортировку на наличие совпадений, добавляет новые элементы в порядке согласно
     // количеству совпадений.
     // Прим- до начала уже должен существовать Главный ArrayList с 1м массивом внутри.
-    public static void Sort(ArrayList<ArrayList> a) throws MyException {
+    public static void Sort(ArrayList<ArrayList> a, ArrayList arr2)   {
         ArrayList<Object> arrSort = new ArrayList<>(6);
+        ArrayList<ArrayList> aNew = new ArrayList<>();
         int t = 0;
-        for (int i = 0; i < a.size()-1; i++) {
+        for (int i = 0; i < a.size(); i++) {
             int k = 0;
 
 //            int nom = 0;
             ArrayList arr1 = a.get(i);
-            ArrayList  arr2 = a.get(i+1);
-            for (int j = 0; j < arr1.size()-1; j++) {
+             for (int j = 0; j < arr1.size(); j++) {
                 if (((arr1.get(j)).equals(arr2.get(j)))) {
                     k++;
                     if (k == arr1.size() ) {
@@ -44,15 +44,15 @@ public class Sort {
 
     }
 
-    //        System.out.println("arrsort- "+ arrSort);
+//            System.out.println("arrsort- "+ arrSort);
 //        System.out.println(maxInd);
 //        System.out.println(nom);
-    static class MyException extends Exception{
-    }
+//    static class MyException extends Exception{
+//    }
 
 
-    public static void main(String[] args) throws MyException {
-        ArrayList<ArrayList> a = new ArrayList<>(10);
+    public static void main(String[] args) {
+            ArrayList<ArrayList> a = new ArrayList<>(10);
         ArrayList<Object> arr1 = new ArrayList<>(5);
         ArrayList<Object> arr2 = new ArrayList<>(10);
         ArrayList<Object> arr3 = new ArrayList<>(10);
@@ -103,7 +103,7 @@ public class Sort {
         a.add(arr2);
         a.add(arr3);
         a.add(arr4);
-        Sort(a);
+        Sort(a,arr1);
 //        Sort(a) ;
         Сonclusion.VyvodArrArr(a);
 

@@ -15,7 +15,7 @@ public class Input {
         }
         Boolean truth = true;
         while (true) {
-            for (int i = 0; i < arr1.size() ; i++) {
+            for (int i = 0; i < arr1.size(); i++) {
                 if (truth != false) {
                     truth = Сonclusion.PointSearch(arr1.get(i));
                 } else {
@@ -25,11 +25,15 @@ public class Input {
                 }
             }
 
-
-            a.add(arr1);
+            if (a != null) {
+                Sort.Sort(a, arr1);
 //            VyvodMass.VyvodArrArr(a);
-            break;
-        }return arr1;
+                break;
+            } else {
+                a.add(arr1);
+            }
+        }
+        return arr1;
     }
 
 }
