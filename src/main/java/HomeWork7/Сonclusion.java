@@ -3,10 +3,10 @@ package HomeWork7;
 import java.util.ArrayList;
 
 public class Сonclusion {
-    public static void VyvodArrArr(ArrayList a) {
-        vyvod((ArrayList) a.get(0));
-        for (int i = 0; i < a.size(); i++) {
-            vyvodBezPovt((ArrayList) a.get(0), (ArrayList) a.get(i));
+    public static void Сonclusion(ArrayList <ArrayList> a) {
+        vyvod(a.get(0));
+        for (int i = 0; i < a.size()-1; i++) {
+            Сonclusion.vyvodBezPovt(a.get(i), a.get(i+1));
         }
     }
 
@@ -24,22 +24,22 @@ public class Сonclusion {
                 return;
             } else {
                 numEquals++;
-//            }
-//            if (numEquals == arr1.size()) {
-//                addArr(arr1, arr2);
+
             }
         }
-//        System.out.println();
     }
 
     public static void vyvod(ArrayList a) {
-        for (int i = 0; i < a.size(); i++) {
+        int  k = a.size();
+        for (int i = 0; i < a.size() ; i++) {
             System.out.println(a.get(i));
-            for (int j = 0; j <= i; j++) {
-                System.out.print("\t");
+            if (k > 0) {
+                for (int j = 0; j <= i; j++) {
+                    System.out.print("\t");
+                    k--;
+                }
             }
         }
-        System.out.println();
     }
 
     // Если массивы совпадают,  то к массиву добавляется новые элементы.

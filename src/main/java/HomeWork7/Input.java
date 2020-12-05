@@ -9,23 +9,37 @@ public class Input {
         ArrayList<String> arr1 = new ArrayList<>();
         Scanner sc1 = new Scanner(System.in);
         String per = sc1.nextLine();
-        String[] arr = per.split("/");
-        for (int i = 0; i < arr.length; i++) {
-            arr1.add(arr[i] + "/");
-        }
-        Boolean truth = true;
-
-        for (int i = 0; i < arr1.size(); i++) {
-            if (truth != false) {
-                truth = Сonclusion.PointSearch(arr1.get(i));
-            } else {
-                System.out.println("Запрещено создавать в файле каталоги и другие файлы!");
-                MyException.myExc();
+        if (per.equals("print")) {
+            Сonclusion.Сonclusion(a);
+            System.out.println(a);
+            MyException.myExp1();//для вывода всего пути
+        } else if (per.equals("")) {//против пустой строки
+            MyException.myExp2();
+        } else {
+            String[] arr = per.split("/");
+            for (int i = 0; i < arr.length; i++) {
+                if (i != arr.length - 1) {
+                    arr1.add(arr[i] + "/");
+                } else {
+                    arr1.add(arr[i]);
+                }
             }
+            Boolean truth = true;
+
+            for (int i = 0; i < arr1.size(); i++) {
+                if (truth != false) {
+                    truth = Сonclusion.PointSearch(arr1.get(i));
+                } else {
+//                System.out.println("Запрещено создавать в файле каталоги и другие файлы!");
+                    MyException.myExc();
+                }
+            }
+
         }
         return arr1;
     }
-    public static ArrayList<String> Vvod( ) {
+
+    public static ArrayList<String> Vvod() {
         ArrayList<String> arr1 = new ArrayList<>();
         Scanner sc1 = new Scanner(System.in);
         String per = sc1.nextLine();
@@ -36,17 +50,17 @@ public class Input {
         return arr1;
     }
 
-    public static void main(String[] args) {
-        ArrayList<ArrayList> a = new ArrayList<>();
-
-        while (true) {
-            try {
-                a.add(Vvod(a));
-                Сonclusion.VyvodArrArr(a);
-
-            } catch (NullPointerException e) {
-                System.out.println("Запрещено создавать в файле каталоги и другие файлы!");
-             }
-        }
-    }
+//    public static void main(String[] args) {
+//        ArrayList<ArrayList> a = new ArrayList<>();
+//
+//        while (true) {
+//            try {
+//                a.add(Vvod(a));
+//                Сonclusion.Сonclusion(a);
+//
+//            } catch (NullPointerException e) {
+//                System.out.println("Запрещено создавать в файле каталоги и другие файлы!");
+//             }
+//        }
+//    }
 }
