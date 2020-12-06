@@ -50,17 +50,4 @@ public class Input {
         return arr1;
     }
 
-//    public static void main(String[] args) {
-//        ArrayList<ArrayList> a = new ArrayList<>();
-//
-//        while (true) {
-//            try {
-//                a.add(Vvod(a));
-//                Сonclusion.Сonclusion(a);
-//
-//            } catch (NullPointerException e) {
-//                System.out.println("Запрещено создавать в файле каталоги и другие файлы!");
-//             }
-//        }
-//    }
 }
