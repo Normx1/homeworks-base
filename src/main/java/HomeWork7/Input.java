@@ -30,7 +30,6 @@ public class Input {
                 if (truth != false) {
                     truth = Сonclusion.PointSearch(arr1.get(i));
                 } else {
-//                System.out.println("Запрещено создавать в файле каталоги и другие файлы!");
                     throw  new NullPointerException();
                 }
             }
