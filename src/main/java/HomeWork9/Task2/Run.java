@@ -1,9 +1,7 @@
 package HomeWork9.Task2;
 
 import java.io.*;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -13,11 +11,11 @@ public class Run {
         File result = new File("NewFile.txt");
         try (BufferedWriter lineWriter = new BufferedWriter(new FileWriter(result))) {
             for (String line : lines) {
-                List<String> sentenc = Arrays.asList(line.split(" "));
-                if (TextFormater.LimetedSentence(sentenc) == true || TextFormater.ifWordIsPolindrom(sentenc) == true) {
+                List<String> sentence = Arrays.asList(line.split(" "));
+                if (TextFormater.LimetedSentence(sentence) == true  || TextFormater.ifWordIsPolindrom(sentence) == true) {
                     lineWriter.write(line);
                     lineWriter.newLine();
-                }
+                                    }
             }
 
     } catch (IOException e) {
