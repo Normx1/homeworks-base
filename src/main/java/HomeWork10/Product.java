@@ -1,6 +1,6 @@
 package HomeWork10;
 
-public class product {
+public class Product {
     private int id;
     private String name;
     private  int price;
@@ -29,7 +29,7 @@ public class product {
         this.price = price;
     }
 
-    public product(int id, String name, int price) {
+    public Product(int id, String name, int price) {
         this.id = id;
         this.name = name;
         this.price = price;
