@@ -12,6 +12,9 @@ public class Shop {
     public void addNewItems(Product newItem) {
         productList.add(newItem);
     }
+    public static void addNewItemsInArrayList(List<Product> arr1, Product newItem) {
+        arr1.add(newItem);
+    }
 
     public TreeSet<Product> getProductList() {
         return productList;
@@ -21,8 +24,8 @@ public class Shop {
         this.productList = productList;
     }
 
-    public TreeSet<Product> getAllItems() {
-        return productList;
+    public static List<Product> getAllItems(List a) {
+        return a;
     }
 
     public void removeItem(Integer id) {
