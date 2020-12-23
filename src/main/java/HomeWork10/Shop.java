@@ -1,8 +1,6 @@
 package HomeWork10;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class Shop {
     public Map productList;
@@ -11,8 +9,9 @@ public class Shop {
         this.productList = productList;
     }
 
-    public static Map<Integer, Product> shop() {
-        Map<Integer, Product> shopList = new HashMap<>();
+    public static Map<Integer, Product> shop(Comparator a) {
+        Comparator<Product> comp1 = new NameCorporator();
+        Map<Integer, Product> shopList = new TreeMap(comp1);
         return shopList;
     }
 
@@ -79,27 +78,26 @@ public class Shop {
             i++;
         }
     }
+}
 
-
-    public static void main(String[] args) {
-        Map magazine = shop();
-        Product item1 = new Product(0, "apple", 5);
-        Product item2 = new Product(1, "banana", 10);
-        Product item3 = new Product(3, "pear", 40);
-        Product item4 = new Product(5, "milk", 15);
-
-
-        addProduct(magazine, item1);
-        addProduct(magazine, item2);
-        addProduct(magazine, item3);
-        addProduct(magazine, item4);
-
-        showShopList(magazine);
-        removeProduct(magazine, 3);
-        showShopList(magazine);
-
-        editProduct(magazine);
-        showShopList(magazine);
-
+class NameCorporator implements Comparator<Product> {
+    @Override
+    public int compare(Product o1, Product o2) {
+        return o1.getName().compareTo(o2.getName());
     }
 }
+
+class PriceComporator implements Comparator<Product> {
+    @Override
+    public int compare(Map.Entry<Integer,Product>) {
+        if (o1.getPrice() > o2.getPrice()) {
+            return 1;
+        }
+        if (o1.getPrice() < o2.getPrice()) {
+            return -1;
+        } else {
+            return 0;
+        }
+    }
+}
+
