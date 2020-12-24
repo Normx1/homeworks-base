@@ -3,32 +3,33 @@ package HomeWork10;
 import java.util.*;
 
 public class Shop {
-    public TreeSet<Product> productList;
+    public static List<Product> productList;
 
-    public Shop(TreeSet<Product> productList) {
+    public Shop(List<Product> productList) {
         this.productList = productList;
     }
 
     public void addNewItems(Product newItem) {
         productList.add(newItem);
     }
+
     public static void addNewItemsInArrayList(List<Product> arr1, Product newItem) {
         arr1.add(newItem);
     }
 
-    public TreeSet<Product> getProductList() {
+    public List<Product> getProductList() {
         return productList;
     }
 
-    public void setProductList(TreeSet<Product> productList) {
+    public void setProductList(ArrayList<Product> productList) {
         this.productList = productList;
     }
 
-    public static List<Product> getAllItems(List a) {
-        return a;
+    public static List<Product> getAllItems() {
+        return productList;
     }
 
-    public void removeItem(Integer id) {
+    public static void removeItem(Integer id) {
         int i = 0;
         for (Product p : productList) {
             if (p.getId() == id) {
@@ -45,7 +46,7 @@ public class Shop {
         }
     }
 
-    public void editItem(Product p) {
+    public static void editItem(Product p) {
         int i = 0;
         for (Product a : productList) {
             if (a.getId() == p.getId()) {
@@ -63,10 +64,17 @@ public class Shop {
         }
     }
 
-        public void seeAllItems () {
+        public static void seeAllItemsArrayList (List<Product> productList) {
             for (Product a : productList) {
                 System.out.printf("id: %s; Name: %s; Price: %s;", a.getId(), a.getName(), a.getPrice());
                 System.out.println();
             }
         }
+
+    public static void seeAllItemsTreeSet (TreeSet<Product> productList) {
+        for (Product a : productList) {
+            System.out.printf("id: %s; Name: %s; Price: %s;", a.getId(), a.getName(), a.getPrice());
+            System.out.println();
+        }
+    }
     }
